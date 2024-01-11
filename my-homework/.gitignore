@@ -1,4 +1,8 @@
 #ignore hello.txt file
-hello.txt
+hw_3/hello.txt
+
+#ignore debug
+debug.py
+
 
 
