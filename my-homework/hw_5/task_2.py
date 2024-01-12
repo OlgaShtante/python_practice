@@ -32,7 +32,7 @@ def test(phrase, exp_res):
     act_res = reverse_words_order(phrase)
     assert act_res == exp_res, f"Error: actual result: {act_res} does not match expected result: {exp_res}"
 # " "
-test(" ", ERROR_MSG)
+test(DELIMITER, ERROR_MSG)
 
 # one word
 test(" one_word ", ERROR_MSG)
