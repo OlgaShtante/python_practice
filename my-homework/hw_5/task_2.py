@@ -1,5 +1,6 @@
 DELIMITER = " "
 ERROR_MSG = "Некорректный ввод. Введите минимум два слова с пробелом между ними."
+
 # create a function to revert words order in the phrase
 def reverse_words_order(input_phrase):
     #remove extra whitespace
@@ -8,7 +9,8 @@ def reverse_words_order(input_phrase):
         return ERROR_MSG
     else:
         words_list = input_phrase.split(DELIMITER)
-        return " ".join(list(reversed(words_list)))
+        return DELIMITER.join(list(reversed(words_list)))
+
 # get a phrase
 input_phrase = str(input("Введите фразу или несколько случайных слов через пробел: "))
 
