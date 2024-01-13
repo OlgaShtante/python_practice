@@ -9,28 +9,3 @@ def count_words_in_sentences(input_text):
 # input text and see the result
 input_text = "Python is an easy to learn language. It has many applications in various fields. You can use it for web development, data analysis, machine learning, and more."
 count_words_in_sentences(input_text)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
