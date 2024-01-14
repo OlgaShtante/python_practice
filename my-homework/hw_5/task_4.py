@@ -38,7 +38,7 @@ for book_info in formatted_book_info:
 # add tests
 def test(book_info, exp_res):
     act_res = format_book_info(book_info)
-    if act_res and len(act_res)==3:
+    if len(act_res)==3:
         assert act_res[0] == exp_res, f"Error: actual result: {act_res[0]} does not match expected result: {exp_res}"
         assert act_res[1] == exp_res, f"Error: actual result: {act_res[1]} does not match expected result: {exp_res}"
         assert act_res[2] == exp_res, f"Error: actual result: {act_res[2]} does not match expected result: {exp_res}"
@@ -69,6 +69,3 @@ test(invalid_data, exp_res)
 invalid_data = "title, author_name author_surname, 69"
 exp_res = f"{ERROR_MSG} {YEAR_ERROR_MSG}"
 test(invalid_data, exp_res)
-
-
-
