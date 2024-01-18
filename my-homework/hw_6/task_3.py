@@ -22,39 +22,39 @@ def find_min_and_max_numbers(list_of_numbers):
     return min_value, max_value
 
 
-def test(testData, exp_res):
-    act_res = find_min_and_max_numbers(testData)
-    print(f"Test data {testData} returns {act_res}")
+def test(test_data, exp_res):
+    act_res = find_min_and_max_numbers(test_data)
+    print(f"Test data {test_data} returns {act_res}")
     assert act_res == exp_res, f"Error: actual result: {act_res} does not match expected result: {exp_res}"
 
-testData = [ 1, 0, 1000]
+test_data = [ 1, 0, 1000]
 exp_res = (0, 1000)
-test(testData, exp_res)
+test(test_data, exp_res)
 
-testData = (0, -1, -1000)
+test_data = (0, -1, -1000)
 exp_res = (-1000, 0)
-test(testData, exp_res)
+test(test_data, exp_res)
 
-testData = ['1', 2]
+test_data = ['1', 2]
 exp_res = (None)
-test(testData, exp_res)
+test(test_data, exp_res)
 
-testData = 'string'
+test_data = 'string'
 exp_res = (None)
-test(testData, exp_res)
+test(test_data, exp_res)
 
-testData = []
+test_data = []
 exp_res = (None)
-test(testData, exp_res)
+test(test_data, exp_res)
 
-testData = {}
+test_data = {}
 exp_res = (None)
-test(testData, exp_res)
+test(test_data, exp_res)
 
-testData = ()
+test_data = ()
 exp_res = (None)
-test(testData, exp_res)
+test(test_data, exp_res)
 
-testData = 1
+test_data = 1
 exp_res = (None)
-test(testData, exp_res)
+test(test_data, exp_res)
