@@ -1,4 +1,5 @@
 from task_7 import is_list_of_integers
+
 def is_sorted_asc(list):
     is_sorted = all(list[i] <= list[i + 1] for i in range(len(list) - 1))
     return is_sorted

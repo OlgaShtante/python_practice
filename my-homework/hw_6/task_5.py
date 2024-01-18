@@ -1,4 +1,5 @@
 from task_4 import is_matrix, is_list_includes_int
+
 def transpose_list(matrix):
     if not is_matrix(matrix):
         print(f"Input data {matrix} is not a matrix")
