@@ -37,27 +37,27 @@ def test(test_data, exp_res):
     print(f"Test: {test_data} returns {act_res}")
     assert act_res == exp_res, f"Error: actual result: {act_res} does not match expected result: {exp_res}"
 
+if __name__ == "__main__": #to avoid test execution when import functions from this file to task_5.py
+    test_data = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+    exp_res = [3, 6, 9]
+    test(test_data, exp_res)
 
-test_data = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
-exp_res = [3, 6, 9]
-test(test_data, exp_res)
+    test_data = [[0, '1'], ['2', '3']]
+    exp_res = []
+    test(test_data, exp_res)
 
-test_data = [[0, '1'], ['1', 2], ['2', '3']]
-exp_res = []
-test(test_data, exp_res)
+    test_data = [[0], [0, 1]]
+    exp_res = []
+    test(test_data, exp_res)
 
-test_data = [[0], [0, 1], [0, 1, 2], [0, 1, 2, 3]]
-exp_res = []
-test(test_data, exp_res)
+    test_data = ([1, 2],[3, 4])
+    exp_res = []
+    test(test_data, exp_res)
 
-test_data = ([1, 2],[3, 4])
-exp_res = []
-test(test_data, exp_res)
+    test_data = 'string'
+    exp_res = []
+    test(test_data, exp_res)
 
-test_data = 'string'
-exp_res = []
-test(test_data, exp_res)
-
-test_data = None
-exp_res = []
-test(test_data, exp_res)
+    test_data = None
+    exp_res = []
+    test(test_data, exp_res)
