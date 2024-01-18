@@ -11,21 +11,24 @@ def is_matrix(matrix):
 
     return True
 
-def find_max_values(matrix):
-    error_msg = f"Input data {matrix} is not a matrix"
-    if not is_matrix(matrix):
-        print(error_msg)
-        return []
-
-    result = []
-
+def is_list_includes_int(matrix):
     for row in matrix:
         int_values = [value for value in row if isinstance(value, int)]
-        if int_values:
-            result.append(max(int_values))
-        else:
-            result.append(None)
+        if not int_values:
+            return False
 
+    return True
+
+def find_max_values(matrix):
+    if not is_matrix(matrix):
+        print(f"Input data {matrix} is not a matrix")
+        return []
+
+    if not is_list_includes_int(matrix):
+        print(f"Input data {matrix} includes not only integers")
+        return []
+
+    result = [max(row) for row in matrix]
     return result
 
 
@@ -40,7 +43,7 @@ exp_res = [3, 6, 9]
 test(test_data, exp_res)
 
 test_data = [[0, '1'], ['1', 2], ['2', '3']]
-exp_res = [0, 2, None]
+exp_res = []
 test(test_data, exp_res)
 
 test_data = [[0], [0, 1], [0, 1, 2], [0, 1, 2, 3]]
