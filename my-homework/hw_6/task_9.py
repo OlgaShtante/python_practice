@@ -37,8 +37,6 @@ def test(test_data, exp_res):
     print(f"Test: {test_data} returns '{act_res}'")
     assert act_res == exp_res, f"Error: actual result: {act_res} does not match expected result: {exp_res}"
 
-
-# Example usage
 test_data = ['flight', 'flow', 'flower']
 exp_res = 'fl'
 test(test_data, exp_res)
