@@ -14,7 +14,6 @@ def is_valid_char(str):
 
     return not new_list
 
-
 test_data = ["()", "()[]{}", "(]", "(){}}{", "([)]", "([])"]
 
 for str in test_data:
