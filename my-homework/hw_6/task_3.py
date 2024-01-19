@@ -21,7 +21,6 @@ def find_min_and_max_numbers(list_of_numbers):
 
     return min_value, max_value
 
-
 def test(test_data, exp_res):
     act_res = find_min_and_max_numbers(test_data)
     print(f"Test data {test_data} returns {act_res}")
