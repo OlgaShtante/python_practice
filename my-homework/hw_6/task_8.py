@@ -12,6 +12,7 @@ def merge_sorted_arrays(arr1, arr2):
     if not (is_sorted_asc(arr1) and is_sorted_asc(arr2)):
         arr1 = sorted(arr1)
         arr2 = sorted(arr2)
+
     merged_array = []
     i = j = 0
 
@@ -27,7 +28,6 @@ def merge_sorted_arrays(arr1, arr2):
     merged_array.extend(arr2[j:])
 
     return merged_array
-
 
 def test(array1, array2, exp_res):
     act_res = merge_sorted_arrays(array1, array2)
