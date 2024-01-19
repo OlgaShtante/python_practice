@@ -46,17 +46,13 @@ if __name__ == "__main__": #to avoid test execution when import functions from t
     test(test_data, exp_res)
 
     test_data = [[0], [0, 1]]
-    exp_res = []
     test(test_data, exp_res)
 
     test_data = ([1, 2],[3, 4])
-    exp_res = []
     test(test_data, exp_res)
 
     test_data = 'string'
-    exp_res = []
     test(test_data, exp_res)
 
     test_data = None
-    exp_res = []
     test(test_data, exp_res)

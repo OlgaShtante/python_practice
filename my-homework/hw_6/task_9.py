@@ -51,5 +51,5 @@ test(test_data, exp_res)
 test_data = []
 test(test_data, exp_res)
 
-test_data = [1, 2, 3]
+test_data = [1, 2]
 test(test_data, exp_res)
