@@ -15,5 +15,4 @@ def calculate_gcd():
 
     return gcd(num1, num2)
 
-result = calculate_gcd()
-print(f"The greatest common divisor: {result}")
+print(f"The greatest common divisor: {calculate_gcd()}")
