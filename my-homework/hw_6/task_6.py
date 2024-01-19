@@ -31,7 +31,6 @@ def build_matrix_from_keyboard():
 
     return matrix
 
-
 matrix = build_matrix_from_keyboard()
 def sum_matrix_elements_by_cols(matrix):
     if matrix ==[]:
@@ -43,7 +42,6 @@ def sum_matrix_elements_by_cols(matrix):
 
 result = sum_matrix_elements_by_cols(matrix)
 print("Sum of elements across columns:", result)
-
 
 def test(test_data, exp_res):
     act_res = sum_matrix_elements_by_cols(test_data)
@@ -57,4 +55,3 @@ test(test_data, exp_res)
 test_data = []
 exp_res = None
 test(test_data, exp_res)
-

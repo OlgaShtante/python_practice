@@ -31,7 +31,6 @@ def find_max_values(matrix):
     result = [max(row) for row in matrix]
     return result
 
-
 def test(test_data, exp_res):
     act_res = find_max_values(test_data)
     print(f"Test: {test_data} returns {act_res}")
