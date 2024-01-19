@@ -1,4 +1,5 @@
 from collections.abc import Iterable
+
 def find_min_and_max_numbers(list_of_numbers):
     if not isinstance(list_of_numbers, Iterable):
         print(f"{list_of_numbers} is not iterable")
