@@ -26,7 +26,6 @@ def count_students_above_average(input_list):
 
     return students_qty_above_avg_height
 
-
 def test(test_data, exp_res):
     act_res = count_students_above_average(test_data)
     print(f"Test: {test_data} returns {act_res}")
