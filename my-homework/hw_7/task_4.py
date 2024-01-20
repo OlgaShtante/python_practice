@@ -21,22 +21,23 @@ def test(test_data, exp_res):
     print(f"Test: {test_data} returns {act_res}")
     assert act_res == exp_res, f"Error: actual result: {act_res} does not match expected result: {exp_res}"
 
-# valid data
-test_data = (1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
-exp_res = 30
-test(test_data, exp_res)
+if __name__ == "__main__": #to avoid test execution when import function
+    # valid data
+    test_data = (1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+    exp_res = 30
+    test(test_data, exp_res)
 
-# tuple of odds
-test_data = (1, 3, 5, 7, 9)
-exp_res = 0
-test(test_data, exp_res)
+    # tuple of odds
+    test_data = (1, 3, 5, 7, 9)
+    exp_res = 0
+    test(test_data, exp_res)
 
-# empty tuple
-test_data = ()
-exp_res = None
-test(test_data, exp_res)
+    # empty tuple
+    test_data = ()
+    exp_res = None
+    test(test_data, exp_res)
 
-# not a tuple
-test_data = [[], {"key":"value"}, {0,2}, 'str', 3.14, 100, None, False]
-for i in range(len(test_data)):
-    test(test_data[i], exp_res)
+    # not a tuple
+    test_data = [[], {"key":"value"}, {0,2}, 'str', 3.14, 100, None, False]
+    for i in range(len(test_data)):
+        test(test_data[i], exp_res)
