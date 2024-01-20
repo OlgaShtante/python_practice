@@ -1,0 +1,55 @@
+ERROR_MSG_PAIR_NUM = "Invalid input. Please insert the number of key-value pairs."
+ERROR_MSG_KEY = "Invalid key input. Please enter a valid key (latin letter)."
+ERROR_MSG_VALUE = "Invalid value input. Please enter a valid value (number)."
+ERROR_MSG_DUP_KEYS =  "This key already exists. Please enter distinct key."
+
+def get_keys_and_values():
+    try:
+        num_of_pairs = int(input(f"Input number of key-value pairs you will store: "))
+    except ValueError:
+        print(ERROR_MSG_PAIR_NUM)
+        return None
+
+    result_string = ""
+    added_keys = set()
+
+    for i in range(num_of_pairs):
+        while True:
+            try:
+                key = str(input(f"Enter your {i+1} key (latin letter): "))
+                if not key.isalpha():
+                    print(ERROR_MSG_KEY)
+                    return None
+                if key in added_keys:
+                    print(ERROR_MSG_DUP_KEYS)
+                    return None
+                added_keys.add(key)
+                result_string += key
+                break
+            except ValueError:
+                print(ERROR_MSG_KEY)
+
+        while True:
+            try:
+                value = int(input(f"Enter your {i+1} value (number): "))
+                result_string += f" {value}, "
+                break
+            except ValueError:
+                print(ERROR_MSG_VALUE)
+
+    return result_string.strip(', ')
+
+def create_dictionary():
+    keys_and_values_str = get_keys_and_values()
+
+    if not keys_and_values_str is None:
+        key_value_pairs = [pair.strip() for pair in keys_and_values_str.split(',')]
+
+        result_dictionary = {}
+        for pair in key_value_pairs:
+            key, value = pair.split()
+            result_dictionary[key] = int(value)
+        return result_dictionary
+
+print("Dictionary:", create_dictionary())
+
