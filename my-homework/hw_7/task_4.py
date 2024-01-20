@@ -4,6 +4,7 @@ from task_3 import is_empty
 def is_value_int(input_value):
     for value in input_value:
         if not isinstance(value, int):
+            print("Contains not only integers")
             return False
     return True
 
@@ -13,7 +14,7 @@ def sum_of_even_numbers(input_tuple):
         for number in input_tuple:
             if number % 2 == 0:
                 even_sum += number
-        print("Sum of even numbers:", even_sum)
+        print(f"Sum of even numbers is {even_sum}")
         return even_sum
 
 def test(test_data, exp_res):
