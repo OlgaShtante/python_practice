@@ -13,6 +13,10 @@ def get_keys_and_values():
     result_string = ""
     added_keys = set()
 
+    if num_of_pairs == 0:
+        print('Cannot create a dictionary with 0 pairs')
+        return None
+
     for i in range(num_of_pairs):
         while True:
             try:
@@ -39,8 +43,7 @@ def get_keys_and_values():
 
     return result_string.strip(', ')
 
-def create_dictionary():
-    keys_and_values_str = get_keys_and_values()
+def create_dictionary(keys_and_values_str):
 
     if not keys_and_values_str is None:
         key_value_pairs = [pair.strip() for pair in keys_and_values_str.split(',')]
@@ -51,5 +54,8 @@ def create_dictionary():
             result_dictionary[key] = int(value)
         return result_dictionary
 
-print("Dictionary:", create_dictionary())
+keys_and_values = get_keys_and_values()
+dictionary = create_dictionary(keys_and_values)
+print("Dictionary:", keys_and_values)
+print("Dictionary:", dictionary)
 
