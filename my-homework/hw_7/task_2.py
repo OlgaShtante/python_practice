@@ -42,38 +42,40 @@ def test(tuple1, tuple2, exp_res):
     print(f"Test: Multiplication of {tuple1} and {tuple2} returns {act_res}")
     assert act_res == exp_res, f"Error: actual result: {act_res} does not match expected result: {exp_res}"
 
-# only int
-tuple1=(1, 2, 3)
-tuple2=(4, 5, 6)
-exp_res=(4, 10, 18)
-test(tuple1, tuple2, exp_res)
+if __name__ == "__main__": #to avoid test execution when import function
 
-# other that can be multiplied if one int is presented
-tuple1=(0.7, '*', [1,2], True, (7,), False)
-tuple2=(10, 3, 2, 10, 2, 99 )
-exp_res=(7.0, '***', [1, 2, 1, 2], 10,(7, 7), 0)
-test(tuple1, tuple2, exp_res)
+    # only int
+    tuple1=(1, 2, 3)
+    tuple2=(4, 5, 6)
+    exp_res=(4, 10, 18)
+    test(tuple1, tuple2, exp_res)
 
-#not tuple
-tuple1=[1,2,3]
-tuple2=(1,2,3)
-exp_res=None
-test(tuple1, tuple2, exp_res)
+    # other that can be multiplied if one int is presented
+    tuple1=(0.7, '*', [1,2], True, (7,), False)
+    tuple2=(10, 3, 2, 10, 2, 99 )
+    exp_res=(7.0, '***', [1, 2, 1, 2], 10,(7, 7), 0)
+    test(tuple1, tuple2, exp_res)
 
-#diff lenth
-tuple1=(0,3)
-tuple2=(1,2,3)
-test(tuple1, tuple2, exp_res)
+    #not tuple
+    tuple1=[1,2,3]
+    tuple2=(1,2,3)
+    exp_res=None
+    test(tuple1, tuple2, exp_res)
 
-#tuple with set
-tuple1=({1, 2}, 4, 5)
-tuple2=(1,2,3)
-test(tuple1, tuple2, exp_res)
+    #diff lenth
+    tuple1=(0,3)
+    tuple2=(1,2,3)
+    test(tuple1, tuple2, exp_res)
 
-#tuple with dict
-tuple1=(0, {"id":1}, 2)
-test(tuple1, tuple2, exp_res)
+    #tuple with set
+    tuple1=({1, 2}, 4, 5)
+    tuple2=(1,2,3)
+    test(tuple1, tuple2, exp_res)
 
-#tuple with None
-tuple1=(1, 2, None)
-test(tuple1, tuple2, exp_res)
+    #tuple with dict
+    tuple1=(0, {"id":1}, 2)
+    test(tuple1, tuple2, exp_res)
+
+    #tuple with None
+    tuple1=(1, 2, None)
+    test(tuple1, tuple2, exp_res)

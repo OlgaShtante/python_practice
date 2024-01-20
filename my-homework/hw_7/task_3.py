@@ -4,9 +4,9 @@ def is_list(input_list):
         return False
     return True
 
-def is_empty_list(input_list):
-    if len(input_list)==0:
-        print("List is empty")
+def is_empty(input_value, value_type):
+    if len(input_value)==0:
+        print(f"{value_type} is empty")
         return True
     return False
 
@@ -19,7 +19,7 @@ def is_value_str(list_of_str):
 def find_longest_shortest_words(list_of_words):
 
     if is_list(list_of_words):
-        if not is_empty_list(list_of_words):
+        if not is_empty(list_of_words, 'List'):
             if is_value_str(list_of_words):
 
                 longest_word = shortest_word = list_of_words[0]
@@ -44,21 +44,22 @@ def test(test_data, exp_res):
     print(f"Test: {test_data} returns {act_res}")
     assert act_res == exp_res, f"Error: actual result: {act_res} does not match expected result: {exp_res}"
 
-# valid data
-test_data = ["apple", "banana", "kiwi", "orange", "grape"]
-exp_res = ('banana', 'kiwi')
-test(test_data, exp_res)
+if __name__ == "__main__": #to avoid test execution when import function
+    # valid data
+    test_data = ["apple", "banana", "kiwi", "orange", "grape"]
+    exp_res = ('banana', 'kiwi')
+    test(test_data, exp_res)
 
-# list len 1
-test_data = ["test"]
-exp_res = ("test", "test")
-test(test_data, exp_res)
+    # list len 1
+    test_data = ["test"]
+    exp_res = ("test", "test")
+    test(test_data, exp_res)
 
-# empty list
-test_data = []
-exp_res = None
-test(test_data, exp_res)
+    # empty list
+    test_data = []
+    exp_res = None
+    test(test_data, exp_res)
 
-# not only str
-test_data = ["word", 4.15, 1, (7,), {1, 2}, [0], {"id":1}, True, None]
-test(test_data, exp_res)
+    # not only str
+    test_data = ["word", 4.15, 1, (7,), {1, 2}, [0], {"id":1}, True, None]
+    test(test_data, exp_res)
