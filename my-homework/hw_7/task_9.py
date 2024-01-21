@@ -21,7 +21,7 @@ except Exception as error_msg:
 def test(set_1, set_2, exp_res):
     act_res = set_operations(set_1, set_2)
     print(f"Test: {set_1}, {set_2} returns {act_res}")
-    #assert act_res == exp_res, f"Error: actual result: {act_res} does not match expected result: {exp_res}"
+    assert act_res == exp_res, f"Error: actual result: {act_res} does not match expected result: {exp_res}"
 
 # valid data
 set_1 = {1, 2, 3, 4}
