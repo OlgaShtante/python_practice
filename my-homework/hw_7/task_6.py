@@ -56,6 +56,5 @@ def create_dictionary(keys_and_values_str):
 
 keys_and_values = get_keys_and_values()
 dictionary = create_dictionary(keys_and_values)
-print("Dictionary:", keys_and_values)
 print("Dictionary:", dictionary)
 
