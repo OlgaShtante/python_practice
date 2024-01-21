@@ -2,7 +2,7 @@ def factorial(n):
     return 1 if n == 0 else n * factorial(n - 1)
 
 def create_dictionary():
-    return {i: factorial(i) for i in range(1, 11)}
+    return {i: factorial(i) for i in range(1, 10 + 1)}
 
 print(create_dictionary())
 
