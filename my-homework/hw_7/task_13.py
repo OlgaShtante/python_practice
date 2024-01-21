@@ -1,5 +1,5 @@
 def create_multiples_list():
-    multiples_list = [num for num in range(1, 100+1) if num % 3 == 0 or num % 5 == 0]
+    multiples_list = [num for num in range(1, 100 + 1) if num % 3 == 0 or num % 5 == 0]
     return multiples_list
 
 print(create_multiples_list())

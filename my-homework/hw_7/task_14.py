@@ -2,7 +2,7 @@ def is_palindrome(num):
     return str(num) == str(num)[::-1]
 
 def create_palindrome_list():
-    palindrome_list = [num for num in range(1, 100+1) if is_palindrome(num)]
+    palindrome_list = [num for num in range(1, 100 + 1) if is_palindrome(num)]
     return palindrome_list
 
 print(create_palindrome_list())

@@ -3,7 +3,7 @@ def get_divisors_set(n):
         return 'Any number'
     n = abs(n)
 
-    possible_divisors= [i for i in range(1, n+1)]
+    possible_divisors= [i for i in range(1, n + 1)]
     actual_divisors_list = [i for i in possible_divisors if n % i == 0 ]
     divisors_set = set(actual_divisors_list)
     return divisors_set
