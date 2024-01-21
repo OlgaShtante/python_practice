@@ -4,8 +4,8 @@ def combine_dictionaries(dict_1, dict_2):
     return combined_dict
 
 try:
-    dict1 = eval(input("Enter the 1st dictionary, e.g., {'k1': 1, 'k2': 2 }: "))
-    dict2 = eval(input("Enter the 2nd dictionary, e.g., {'k1': 1, 'k2': 2 }: "))
+    dict1 = eval(input("Input the 1st dictionary, e.g., {'k1': 1, 'k2': 2 }: "))
+    dict2 = eval(input("Input the 2nd dictionary, e.g., {'k1': 1, 'k2': 2 }: "))
     combined_dictionary = combine_dictionaries(dict1, dict2)
     print("Combined dictionary:", combined_dictionary)
 except Exception as error_msg:

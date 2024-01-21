@@ -1,7 +1,7 @@
 ERROR_MSG_PAIR_NUM = "Invalid input. Please insert the number of key-value pairs."
-ERROR_MSG_KEY = "Invalid key input. Please enter a valid key (latin letter)."
-ERROR_MSG_VALUE = "Invalid value input. Please enter a valid value (number)."
-ERROR_MSG_DUP_KEYS =  "This key already exists. Please enter distinct key."
+ERROR_MSG_KEY = "Invalid key input. Please input a valid key (latin letter)."
+ERROR_MSG_VALUE = "Invalid value input. Please input a valid value (number)."
+ERROR_MSG_DUP_KEYS =  "This key already exists. Please input distinct key."
 
 def get_keys_and_values():
     try:
@@ -20,7 +20,7 @@ def get_keys_and_values():
     for i in range(num_of_pairs):
         while True:
             try:
-                key = str(input(f"Enter your {i+1} key (latin letter): "))
+                key = str(input(f"Input your {i+1} key (latin letter): "))
                 if not key.isalpha():
                     print(ERROR_MSG_KEY)
                     return None
@@ -35,7 +35,7 @@ def get_keys_and_values():
 
         while True:
             try:
-                value = int(input(f"Enter your {i+1} value (number): "))
+                value = int(input(f"Input your {i+1} value (number): "))
                 result_string += f" {value}, "
                 break
             except ValueError:

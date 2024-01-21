@@ -2,8 +2,8 @@ def print_value_for_key(dictionary, key):
     return dictionary.get(key, "Key not found")
 
 try:
-    input_dict = eval(input("Enter dictionary, e.g., {'k1': 1, 'k2': 2}: "))
-    input_key = input("Enter key: ")
+    input_dict = eval(input("Input dictionary, e.g., {'k1': 1, 'k2': 2}: "))
+    input_key = input("Input key: ")
     result = print_value_for_key(input_dict, input_key)
     print(result)
 except Exception as error_msg:
