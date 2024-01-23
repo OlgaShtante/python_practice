@@ -7,7 +7,6 @@ def display_student_averages(file_path):
     try:
         with open(file_path, 'r') as file:
             students_data = json.load(file)
-            print(students_data)
 
         students_averages = {}
 
@@ -16,14 +15,14 @@ def display_student_averages(file_path):
             grade = student['Grade']
             students_averages[student_name] = grade
 
-        overall_average = sum(students_averages.values()) / len(students_averages)
+        group_average = sum(students_averages.values()) / len(students_averages)
 
         print("Average scores for a student:")
         for student_name, average_score in students_averages.items():
             print(f"{student_name}: {average_score:.2f}")
 
         print("\nAverage score for the group:")
-        print(f"{overall_average:.2f}")
+        print(f"{group_average:.2f}")
     except FileNotFoundError as error_msg:
         print(f"File not found. Error: {error_msg}")
     except json.JSONDecodeError as error_msg:
