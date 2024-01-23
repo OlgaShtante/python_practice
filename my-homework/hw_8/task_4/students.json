@@ -1,0 +1,20 @@
+{
+  "student_1": {
+    "Name": "Ivan",
+    "Surname": "Ivanov",
+    "Age": 18,
+    "Course": 2,
+    "Group": "Group A",
+    "Subject": "Mathematics",
+    "Grade": 4.5
+  },
+  "student_2": {
+    "Name": "Ivanka",
+    "Surname": "Ivanova",
+    "Age": 16,
+    "Course": 2,
+    "Group": "Group A",
+    "Subject": "Literature",
+    "Grade": 4.9
+  }
+}
