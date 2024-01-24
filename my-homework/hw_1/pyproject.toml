@@ -1,0 +1,14 @@
+[tool.poetry]
+name = "project-2"
+version = "0.1.0"
+description = ""
+authors = ["OlgaShtante <51260907+OlgaShtante@users.noreply.github.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
