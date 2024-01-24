@@ -18,7 +18,7 @@ def compare_json_files(file_1, file_2):
 
         for key in common_keys:
             if data_1[key] != data_2[key]:
-                differences.append(f"Key {key} is different. {DICT_1}: {data_1[key]}, {DICT_2}: {data_2[key]}")
+                differences.append(f"Key {key} is different.\n{DICT_1}: {data_1[key]}, {DICT_2}: {data_2[key]}\n")
 
         missing_keys_file_1 = different_keys - keys_2
         missing_keys_file_2 = different_keys - keys_1
