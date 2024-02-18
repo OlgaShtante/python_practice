@@ -1,6 +1,6 @@
 from typing import Dict, Union
 
-def upper_case(func):
+def uppercase(func):
     def wrapper():
         original_dict = func()
         updated_dict = {k: v for k, v in original_dict.items()}
@@ -9,12 +9,12 @@ def upper_case(func):
 
     return wrapper
 
-@upper_case
+@uppercase
 def f1() -> Dict[str, int]:
     original_dict = {'a': 1, 'b': 2}
     return original_dict
 
-@upper_case
+@uppercase
 def f2() -> Dict[str, Union[str, int]]:
     return {'a': 'a', 'b': 'b'}
 

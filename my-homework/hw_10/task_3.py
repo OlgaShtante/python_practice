@@ -1,6 +1,6 @@
 from typing import Dict, Union, List
 
-def upper_case(func):
+def uppercase(func):
     def wrapper():
         result = func()
         updated_result = {}
@@ -28,19 +28,19 @@ def upper_case(func):
 
     return wrapper
 
-@upper_case
+@uppercase
 def f1() -> Dict[str, int]:
     return {'a': 1, 'b': 2}
 
-@upper_case
+@uppercase
 def f2() -> Dict[str, Union[str, int]]:
     return {'a': 'a', 'b': 'b'}
 
-@upper_case
+@uppercase
 def f3() -> Dict[str, Union[str, int, List[Dict[str, int]]]]:
     return {'a': 'a', 'c': [{'b': 'b'}]}
 
-@upper_case
+@uppercase
 def f4() -> Dict[str, Union[str, int, List[Dict[str, int]]]]:
     return {'a': 'a', 'c': [{'b': 1}, {'d': 2}]}
 
